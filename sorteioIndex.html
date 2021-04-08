@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFBA Sorteio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+    </style>
+
+    <style>
+       body{
+           text-align:center;
+           max-width: 1100px;
+           margin: auto;
+           background-color: black;  }
+       
+        .cont1{
+            width: 180px;
+            display: flex;
+            flex-direction:column;
+            margin: auto;     }
+
+        .cont2{
+            width: 600px;
+            display: flex;
+            flex-direction:column;
+            margin: auto;
+            
+            font-family: "Lobster";
+            font-size: 39px;
+            text-shadow: 1px 1px 0px rgb(188,1,131); }
+
+        .conPgf{
+            margin-bottom: 100px;
+            padding: 0;
+            border: 0;
+            font-weight: bold;
+            font-style: italic;  }
+
+        .contSor{
+            width: 400px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            
+            font-weight: bold;  }
+
+        button{
+            background: none;
+            border: 0;
+            position: relative;
+            font-family: "Raleway";
+            color: rgb(188,1,131);
+            font-size: 34px;
+            font-weight: bold;
+            margin: auto;
+            transition: all 500ms ease-in-out; 
+            z-index: 1; }
+
+        button:after{
+            content: " ";
+
+            transition: inherit;
+            width: 59px;
+            height: 59px;
+            border-radius: 50%;
+            background: black;
+            
+            position:absolute;
+            top:-24%;
+            left: -10px;
+
+            opacity: 0.8;
+            z-index:-1;    }
+
+        button:hover:after{
+            width: calc(100% + 20px);
+            border-radius: 20px;
+            opacity: 1;     }
+
+        .pgf{margin:0;
+            font-family: "Raleway";
+            font-size:15px;       }
+
+        .contAll{
+            background-color: white;
+            width:800px ;
+            max-width: auto;
+            display: inline-block;
+            height: 1000px;        
+            z-index: -2;  }
+
+        .img1{  position: absolute;
+        top: -14%;
+        left: -3.5%;
+        width:660px; 
+        z-index: -3;  }
+
+        .img2{  position: absolute;
+        top: -4%;
+        left: 69%;
+        width:590px;
+        z-index: -3;   }
+
+        .text2{ font-size:23px;
+        font-family: "Raleway";
+        padding: 30px;
+        margin-bottom: 90px;
+        text-shadow: none;    }
+
+        #go{margin-bottom: 20px;  }
+
+    </style>
+    
+    <script>
+        function Sorteio(){
+            const nmax= 99;
+            const nsor= Math.round(Math.random()*nmax);
+        
+            document.getElementById("go").innerHTML=nsor
+        }  
+        
+    </script>
+
+</head>
+<body>
+    <img class="img2" src="../Js Project/29b7891cd50e2d12cacf48386aeee926.jpg">
+    <img class="img1" src="../Js Project/07261ca493929aac0f258c9b982446d3.jpg">
+    <div class="contAll">
+    <div class="cont1">
+        <img src="../Js Project/logo_size.jpg">
+    </div>
+    <div class="conPgf">    
+    <p class="pgf">Presents</p>
+    </div>
+    <div class="cont2">
+        <h1 class="contSor">Monster-Rifa</h1>
+    <h1 id="go"></h1>
+    <h3 class="text2">Será sorteado um número entre 01 e 99. Boa Sorte!</h3>
+    <button onclick="Sorteio()">Sortear</button>
+    </div> 
+    </div> 
+</body>
+</html>
